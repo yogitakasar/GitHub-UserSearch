@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params)=>{
       this.searchStr=params['search'];
+      this.currentPage = 1;
       this.users = [];
       this.loadUsers();
     })
