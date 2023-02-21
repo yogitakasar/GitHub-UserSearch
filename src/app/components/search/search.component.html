@@ -1,0 +1,17 @@
+<form [formGroup]="form" class="search-box">
+
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text bg-secondary text-white">
+         <fa-icon [icon]="faSearch"></fa-icon>
+      </div>
+    </div>
+    <input type="search"
+           class="form-control"
+           placeholder="{{'Search for a user...'}}"
+           aria-label="Product search"
+           id="search-addon"
+           formControlName="search"
+           (keyup.enter)="search()">
+  </div>
+</form>
