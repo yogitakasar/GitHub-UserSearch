@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
 
   onScroll = (): void => {
 
-    if ((window.innerHeight + window.scrollY >= document.body.scrollHeight)&& !this.isLoading) {
+    if ((Math.round(window.innerHeight + window.scrollY) >= document.body.scrollHeight)&& !this.isLoading) {
       this.currentPage+=1
       this.loadUsers();
     }
